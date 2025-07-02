@@ -1,0 +1,100 @@
+<?php
+
+declare(strict_types=1);
+
+namespace ComCompany\PhpEdlContracts\DTO;
+
+class BienDTO
+{
+    private ?int $nbPiece = null;
+    private bool $isMeuble = false;
+    private ?string $etage = null;
+    private ?string $numPorte = null;
+    private ?float $surface = null;
+    private ?AdresseDTO $adresse = null;
+    public function __construct(private readonly string $reference, private readonly string $type)
+    {
+    }
+
+    public function getReference(): string
+    {
+        return $this->reference;
+    }
+
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    public function getNbPiece(): ?int
+    {
+        return $this->nbPiece;
+    }
+
+    public function setNbPiece(?int $nbPiece): BienDTO
+    {
+        $this->nbPiece = $nbPiece;
+
+        return $this;
+    }
+
+    public function isMeuble(): bool
+    {
+        return $this->isMeuble;
+    }
+
+    public function setIsMeuble(bool $isMeuble): BienDTO
+    {
+        $this->isMeuble = $isMeuble;
+
+        return $this;
+    }
+
+    public function getEtage(): ?string
+    {
+        return $this->etage;
+    }
+
+    public function setEtage(?string $etage): BienDTO
+    {
+        $this->etage = $etage;
+
+        return $this;
+    }
+
+    public function getNumPorte(): ?string
+    {
+        return $this->numPorte;
+    }
+
+    public function setNumPorte(?string $numPorte): BienDTO
+    {
+        $this->numPorte = $numPorte;
+
+        return $this;
+    }
+
+    public function getSurface(): ?float
+    {
+        return $this->surface;
+    }
+
+    public function setSurface(?float $surface): BienDTO
+    {
+        $this->surface = $surface;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?AdresseDTO
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(?AdresseDTO $adresse): BienDTO
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "com-company/php-edl-contracts",
+    "description": "Modeles de données pour dialoguer avec l'application d'etat des lieux",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "ComCompany\\PhpEdlContracts\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nfrevol",
+            "email": "nfrevol@com-company.fr"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "friendsofphp/php-cs-fixer": "^3.76"
+    },
+    "scripts": {
+        "vc": {
+            "PHP CS FIXER" : "XDEBUG_MODE=off php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix -v",
+            "PHP STAN" : "XDEBUG_MODE=off php vendor/bin/phpstan analyse src --level=4 --memory-limit=4G"
+        }
+    }
+}
