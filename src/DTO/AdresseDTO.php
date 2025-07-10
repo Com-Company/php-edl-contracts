@@ -8,7 +8,7 @@ class AdresseDTO
 {
     private ?string $rue = null;
     private ?string $rueComplement = null;
-    private ?int $codePostal = null;
+    private ?string $codePostal = null;
     private ?string $ville = null;
 
     public function getRue(): ?string
@@ -35,12 +35,12 @@ class AdresseDTO
         return $this;
     }
 
-    public function getCodePostal(): ?int
+    public function getCodePostal(): ?string
     {
         return $this->codePostal;
     }
 
-    public function setCodePostal(?int $codePostal): AdresseDTO
+    public function setCodePostal(?string $codePostal): AdresseDTO
     {
         $this->codePostal = $codePostal;
 
