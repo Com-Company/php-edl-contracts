@@ -6,8 +6,17 @@ namespace ComCompany\PhpEdlContracts\DTO;
 
 class UserDTO
 {
-    public function __construct(private readonly string $nom, private readonly string $prenom, private readonly string $email)
+    public function __construct(
+        private readonly string $id,
+        private readonly string $nom,
+        private readonly string $prenom,
+        private readonly string $email,
+    ) {
+    }
+
+    public function getId(): string
     {
+        return $this->id;
     }
 
     public function getNom(): string
