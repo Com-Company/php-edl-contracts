@@ -6,7 +6,7 @@ namespace ComCompany\PhpEdlContracts\DTO;
 
 class BienDTO
 {
-    private ?int $libelle = null;
+    private ?string $libelle = null;
     private ?int $nbPiece = null;
     private bool $isMeuble = false;
     private ?string $etage = null;
@@ -27,15 +27,14 @@ class BienDTO
         return $this->type;
     }
 
-    public function getLibelle(): ?int
+    public function getLibelle(): ?string
     {
         return $this->libelle;
     }
 
-    public function setLibelle(?int $libelle): BienDTO
+    public function setLibelle(?string $libelle): BienDTO
     {
         $this->libelle = $libelle;
-
         return $this;
     }
 
@@ -51,7 +50,7 @@ class BienDTO
         return $this;
     }
 
-    public function isMeuble(): bool
+    public function getIsMeuble(): bool
     {
         return $this->isMeuble;
     }
