@@ -7,7 +7,7 @@ namespace ComCompany\PhpEdlContracts\DTO;
 class BienDTO
 {
     private ?string $libelle = null;
-    private ?int $nbPiece = null;
+    private ?int $nbPieces = null;
     private bool $isMeuble = false;
     private ?string $etage = null;
     private ?string $numPorte = null;
@@ -38,14 +38,14 @@ class BienDTO
         return $this;
     }
 
-    public function getNbPiece(): ?int
+    public function getNbPieces(): ?int
     {
-        return $this->nbPiece;
+        return $this->nbPieces;
     }
 
-    public function setNbPiece(?int $nbPiece): BienDTO
+    public function setNbPieces(?int $nbPieces): BienDTO
     {
-        $this->nbPiece = $nbPiece;
+        $this->nbPieces = $nbPieces;
 
         return $this;
     }
