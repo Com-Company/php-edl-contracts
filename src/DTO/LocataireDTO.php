@@ -11,6 +11,7 @@ class LocataireDTO
     private ?string $prenom = null;
     private ?string $raisonSociale = null;
     private ?string $telephone = null;
+    private ?string $email = null;
     private ?AdresseDTO $adresse = null;
 
     public function __construct(private readonly string $reference)
@@ -78,6 +79,18 @@ class LocataireDTO
     public function setTelephone(?string $telephone): LocataireDTO
     {
         $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(?string $email): LocataireDTO
+    {
+        $this->email = $email;
 
         return $this;
     }

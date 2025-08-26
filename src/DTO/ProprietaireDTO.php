@@ -11,6 +11,7 @@ class ProprietaireDTO
     private ?string $prenom = null;
     private ?string $raisonSociale = null;
     private ?string $telephone = null;
+    private ?string $email = null;
     private ?AdresseDTO $adresse = null;
 
     public function __construct(private readonly string $reference)
@@ -78,6 +79,18 @@ class ProprietaireDTO
     public function setTelephone(?string $telephone): ProprietaireDTO
     {
         $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(?string $email): ProprietaireDTO
+    {
+        $this->email = $email;
 
         return $this;
     }

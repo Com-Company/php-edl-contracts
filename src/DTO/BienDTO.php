@@ -35,6 +35,7 @@ class BienDTO
     public function setLibelle(?string $libelle): BienDTO
     {
         $this->libelle = $libelle;
+
         return $this;
     }
 
