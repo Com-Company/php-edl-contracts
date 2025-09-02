@@ -24,7 +24,7 @@ class BienDTO
         return $this->reference;
     }
 
-    public function getType(): string
+    public function getType(): TypeBienEnum
     {
         return $this->type;
     }
