@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace ComCompany\PhpEdlContracts\Enum;
 
-enum TypeBienEnum
+enum TypeBienEnum: string
 {
-    case APPARTEMENT;
-    case MAISON;
-    case GARAGE;
-    case LOCAL;
-    case AUTRE;
+    case APPARTEMENT = 'APPARTEMENT';
+    case MAISON = 'MAISON';
+    case GARAGE = 'GARAGE';
+    case LOCAL = 'LOCAL';
+    case AUTRE = 'AUTRE';
 }

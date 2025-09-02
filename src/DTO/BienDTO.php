@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace ComCompany\PhpEdlContracts\DTO;
 
+use ComCompany\PhpEdlContracts\Enum\TypeBienEnum;
+
 class BienDTO
 {
     private ?string $libelle = null;
@@ -13,7 +15,7 @@ class BienDTO
     private ?string $numPorte = null;
     private ?float $surface = null;
     private ?AdresseDTO $adresse = null;
-    public function __construct(private readonly string $reference, private readonly string $type)
+    public function __construct(private readonly string $reference, private readonly TypeBienEnum $type)
     {
     }
 
