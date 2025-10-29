@@ -7,18 +7,19 @@ namespace ComCompany\PhpEdlContracts\DTO\Request;
 use ComCompany\PhpEdlContracts\Enum\TypeEtatDesLieuxEnum;
 use DateTimeImmutable;
 
-class SynchroniserEtatDesLieuxRequestDTO
+readonly class SynchroniserEtatDesLieuxRequestDTO
 {
     /**
      * @param string[] $referencesBaux
      */
     public function __construct(
-        public readonly string $reference,
-        public readonly string $type,
-        public readonly array $referencesBaux,
-        public readonly string $referenceRapport,
-        public readonly string $dateCreationRapport,
-        public readonly string $nomRapport,
+        public string $reference,
+        public string $type,
+        public array $referencesBaux,
+        public string $referenceRapport,
+        public string $dateCreationRapport,
+        public string $nomRapport,
+        public string $urlRapport,
     ) {
     }
 }
