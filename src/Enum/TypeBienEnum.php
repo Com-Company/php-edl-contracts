@@ -10,5 +10,6 @@ enum TypeBienEnum: string
     case MAISON = 'MAISON';
     case GARAGE = 'GARAGE';
     case LOCAL = 'LOCAL';
+    case STUDIO = 'STUDIO';
     case AUTRE = 'AUTRE';
 }

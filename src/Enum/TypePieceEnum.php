@@ -25,6 +25,7 @@ enum TypePieceEnum: string
     case BUANDERIE = 'BUANDERIE';
     case TERRASSE_BALCON = 'TERRASSE_BALCON';
     case EXTERIEUR_JARDIN = 'EXTERIEUR_JARDIN';
+    case PIECE_DE_VIE = 'PIECE_DE_VIE';
     case AUTRE_PIECE = 'AUTRE_PIECE';
 
 }
