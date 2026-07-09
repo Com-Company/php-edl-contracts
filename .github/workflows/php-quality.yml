@@ -1,0 +1,39 @@
+name: PHP Quality
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+jobs:
+  quality:
+    name: CS Fixer & PHPStan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Installation de PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          coverage: none
+          tools: composer
+
+      - name: Cache des dépendances Composer
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('composer.lock') }}
+          restore-keys: composer-
+
+      - name: Installation des dépendances
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: PHP CS Fixer (vérification uniquement)
+        run: XDEBUG_MODE=off php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --dry-run --diff -v
+
+      - name: PHPStan
+        run: XDEBUG_MODE=off php vendor/bin/phpstan analyse src --level=4 --memory-limit=4G
