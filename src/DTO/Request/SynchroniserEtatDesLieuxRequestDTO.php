@@ -17,7 +17,7 @@ readonly class SynchroniserEtatDesLieuxRequestDTO
         public string $dateCreationRapport,
         public string $nomRapport,
         public string $urlRapport,
-        public ?string $creatorAzureId,
+        public ?string $creatorAzureId = null,
     ) {
     }
 }
