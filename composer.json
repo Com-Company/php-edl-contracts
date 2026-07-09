@@ -22,9 +22,11 @@
         "friendsofphp/php-cs-fixer": "^3.76"
     },
     "scripts": {
-        "vc": {
-            "PHP CS FIXER" : "XDEBUG_MODE=off php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix -v",
-            "PHP STAN" : "XDEBUG_MODE=off php vendor/bin/phpstan analyse src --level=4 --memory-limit=4G"
-        }
+        "cs-fixer": "XDEBUG_MODE=off php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix -v",
+        "phpstan": "XDEBUG_MODE=off php vendor/bin/phpstan analyse src --level=4 --memory-limit=4G",
+        "vc": [
+            "@cs-fixer",
+            "@phpstan"
+        ]
     }
 }

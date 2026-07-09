@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace ComCompany\PhpEdlContracts\DTO\Request;
 
-use ComCompany\PhpEdlContracts\Enum\TypeEtatDesLieuxEnum;
-use DateTimeImmutable;
-
 readonly class SynchroniserEtatDesLieuxRequestDTO
 {
     /**
@@ -20,6 +17,7 @@ readonly class SynchroniserEtatDesLieuxRequestDTO
         public string $dateCreationRapport,
         public string $nomRapport,
         public string $urlRapport,
+        public ?string $creatorAzureId,
     ) {
     }
 }
